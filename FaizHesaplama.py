@@ -5,7 +5,7 @@ print("╠" + "═" * 46 + "╝")
 
 ad = input("║ " + "Adınız giriniz                      : ")
 
-kredi_tutari = float(input("║ " + "Kredi tutarınızı giriniz            : "))
+kredi_tutari = round(float(input("║ " + "Kredi tutarınızı giriniz            : ")), 2)
 yillik_faiz_orani = float(input("║ " + "Yıllık faiz oranını giriniz (yıllık): "))
 print("╠" + "═" * 2 + " " + "Zaman uzunluğu")
 
@@ -26,7 +26,7 @@ def ciktilar():
         print("╠" + "══" + " " "Aylık ödeme: " + str("\n") + "╠" + "═" + " " + str(i) + "$")
         print("╠" + "══" + " " "Toplam ödeme: " + str("\n") + "╠" + "═" + " " + str(kredi_tutari + i) + "$")
         print("╠" + "═" * 47)
-        i +=aylik_yenileme
+        i += round(aylik_yenileme, 2)
         if (i%12==0):
             yil+=1
 ciktilar()
